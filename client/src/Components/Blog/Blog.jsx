@@ -25,7 +25,6 @@ export default function Blog() {
 
   return (
     <>
-      <Nav />
       <div className="container-fluid blog_container">
         <div className="row d-flex p-5 justify-content-around align-items-center form_blog_container">
           <div className="col-lg-5 col-md-10 p-5 form_container">

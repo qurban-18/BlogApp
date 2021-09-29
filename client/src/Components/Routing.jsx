@@ -7,9 +7,12 @@ import About from "./About/About";
 import CreateBlog from "./Blog/Blog";
 import ReadPost from "./ReadPost/ReadPost";
 import Contact from "./Contact/Contact";
+import MyBlogs from "../Pages/MyBlogsPage";
+import Nav from "./Navbar/Nav";
 export default function Routing() {
   return (
     <BrowserRouter>
+      <Nav />
       <Switch>
         <Route exact path="/">
           <LandingPage />
@@ -31,6 +34,9 @@ export default function Routing() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/myblogs">
+          <MyBlogs />
         </Route>
       </Switch>
     </BrowserRouter>

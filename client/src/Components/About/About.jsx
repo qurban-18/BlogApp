@@ -57,7 +57,6 @@ export default function About() {
         </div>
       ) : (
         <>
-          <Nav />
           <div className="container mt-3">
             <div className="row d-flex justify-content-center no-gutters p-4 mt-3">
               <div className="col-lg-8">

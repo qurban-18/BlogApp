@@ -145,3 +145,13 @@ export const views = async (req, res) => {
     console.log(error);
   }
 };
+
+export const myBlogs = async (req, res) => {
+  try {
+    const _id = req.body._id;
+    const blogs = await BlogModel.find({ UserId: _id });
+    res.status(200).json(blogs);
+  } catch (err) {
+    console.log(err);
+  }
+};

@@ -71,7 +71,6 @@ export default function SignUp() {
 
   return (
     <>
-      <Nav />
       <div className="container-fluid p-5">
         <div className="row no-gutters d-flex justify-content-center">
           <div className="col-lg-5 col-sm-11  login-form-cont p-5">

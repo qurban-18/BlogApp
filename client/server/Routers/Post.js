@@ -10,6 +10,7 @@ import {
   ReadPost,
   UpdatePost,
   views,
+  myBlogs,
 } from "../Controllers/Post.js";
 
 const Router = express.Router();
@@ -23,4 +24,5 @@ Router.post("/logout", Logout);
 Router.post("/readpost", ReadPost);
 Router.post("/update", UpdatePost);
 Router.post("/view", views);
+Router.post("/myblog", myBlogs);
 export default Router;

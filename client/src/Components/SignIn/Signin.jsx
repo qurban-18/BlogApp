@@ -51,7 +51,6 @@ export default function SignIn() {
   };
   return (
     <>
-      <Nav />
       {a ? (
         <Alert
           type="warning"

@@ -64,6 +64,13 @@ export default function Nav() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink style={{ textDecoration: "none" }} to="/myblogs">
+                <a href="true" className="nav-link">
+                  My Blogs
+                </a>
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink style={{ textDecoration: "none" }} to="/contact">
                 <a href="true" className="nav-link">
                   Contact Us

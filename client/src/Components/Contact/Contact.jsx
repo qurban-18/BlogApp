@@ -22,7 +22,6 @@ export default function Contact() {
   ];
   return (
     <>
-      <Nav />
       <div className="container-fluid Contact">
         <div className="container h-100 g-0">
           <div className="row h-100 g-0">

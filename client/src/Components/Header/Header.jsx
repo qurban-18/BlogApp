@@ -8,8 +8,6 @@ import { READ_DATA } from "../../redux/actions";
 export default function Header() {
   const [loading, setloading] = useState(false);
   const getData = useSelector((store) => store.blogData);
-  console.log(getData);
-  console.log(getData);
   const dispatch = useDispatch();
   useEffect(() => {
     axios

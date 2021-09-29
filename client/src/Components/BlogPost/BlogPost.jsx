@@ -16,26 +16,23 @@ export default function BlogPost() {
   const img =
     "http://c.files.bbci.co.uk/C870/production/_112921315_gettyimages-876284806.jpg";
 
-  const date = new Date();
   useEffect(() => {
     axios.get("http://localhost:3500").then((res) => setgetData(res.data));
   }, [getData]);
 
   function onDel(e) {
-    console.log(e);
     let a = getData[e];
-
-    axios
-      .post("http://localhost:3500/del", a)
-      .then((res) => console.log(res.data));
+    axios.post("http://localhost:3500/del", a);
   }
   const onRead = (e, i) => {
     dispatch(BLOG_ID(getData[i]._id));
     localStorage.setItem("readPost", JSON.stringify(e));
-    axios.post("http://localhost:3500/view", {
-      Views: e.Views + 1,
-      _id: e._id,
-    });
+    if (e.UserId !== localUserData._id) {
+      axios.post("http://localhost:3500/view", {
+        Views: e.Views + 1,
+        _id: e._id,
+      });
+    }
   };
 
   return (
@@ -77,9 +74,9 @@ export default function BlogPost() {
                       </Button>
                     </Link>
                     <p className="m-0 blogpost_date">
-                      {new Date(date).toDateString()}&nbsp;&nbsp;
+                      {new Date(e.Date).toDateString()}&nbsp;&nbsp;
                       <span>
-                        <BsEyeFill />({e.Views})
+                        <BsEyeFill /> {e.Views}
                       </span>
                     </p>
                   </div>
