@@ -6,11 +6,11 @@ import { Skeleton } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { BLOG_ID } from "../../redux/actions";
+import { BsEyeFill } from "react-icons/bs";
 
 export default function BlogPost() {
   const [getData, setgetData] = useState();
   const localUserData = JSON.parse(localStorage.getItem("userData"));
-  console.log(getData);
 
   const dispatch = useDispatch();
   const img =
@@ -32,7 +32,12 @@ export default function BlogPost() {
   const onRead = (e, i) => {
     dispatch(BLOG_ID(getData[i]._id));
     localStorage.setItem("readPost", JSON.stringify(e));
+    axios.post("http://localhost:3500/view", {
+      Views: e.Views + 1,
+      _id: e._id,
+    });
   };
+
   return (
     <>
       {getData ? (
@@ -72,7 +77,10 @@ export default function BlogPost() {
                       </Button>
                     </Link>
                     <p className="m-0 blogpost_date">
-                      {new Date(date).toDateString()}
+                      {new Date(date).toDateString()}&nbsp;&nbsp;
+                      <span>
+                        <BsEyeFill />({e.Views})
+                      </span>
                     </p>
                   </div>
                 </div>

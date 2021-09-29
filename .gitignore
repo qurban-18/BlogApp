@@ -5,6 +5,8 @@
 ### dotenv ###
 .env
 
+.gitignore
+
 ### Node ###
 # Logs
 logs

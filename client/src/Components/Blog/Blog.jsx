@@ -14,8 +14,6 @@ export default function Blog() {
     Message: "",
     UserId: localData._id,
   });
-  console.log(localData);
-  console.log(data);
   function onHandleChange(e) {
     setdata({ ...data, [e.target.placeholder]: e.target.value });
   }

@@ -1,5 +1,6 @@
+import {} from "dotenv/config.js";
 import mongoose from "mongoose";
-const Connection_Url = "";
+const Connection_Url = process.env.DB_URI;
 
 const db = mongoose
   .connect(Connection_Url, {

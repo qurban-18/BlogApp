@@ -53,8 +53,7 @@ export const UpdatePost = async (req, res) => {
 
 export const PostRegisterData = async (req, res) => {
   const body = req.body;
-  const { Email } = req.body;
-  const { FirstName, LastName, Eamil, Password, ConfirmPassword, Gender } =
+  const { FirstName, LastName, Email, Password, ConfirmPassword, Gender } =
     req.body;
   let register = userModel(body);
   try {
@@ -65,7 +64,7 @@ export const PostRegisterData = async (req, res) => {
     if (
       FirstName == "" ||
       LastName == "" ||
-      Eamil == "" ||
+      Email == "" ||
       Password == "" ||
       ConfirmPassword == "" ||
       Gender == ""
@@ -136,5 +135,13 @@ export const Logout = async (req, res) => {
       expiresIn: "1sec",
     }
   );
-  console.log(logout, "logout");
+};
+
+export const views = async (req, res) => {
+  try {
+    const { _id, Views } = req.body;
+    await BlogModel.findByIdAndUpdate(_id, { Views });
+  } catch (error) {
+    console.log(error);
+  }
 };
