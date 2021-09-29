@@ -1,0 +1,24 @@
+.login-form-cont {
+  background: whitesmoke;
+}
+.signup_content {
+}
+@media screen and (max-width: 515px) {
+  .form {
+    width: 300px;
+    margin-left: -20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .form {
+    width: 250px;
+    margin-left: -20px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .form {
+    width: 200px;
+    margin-left: -20px;
+    /* margin-right: 100px; */
+  }
+}

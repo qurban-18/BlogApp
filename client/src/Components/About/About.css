@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img_box {
+  height: 120px;
+  width: 130px;
+  border-radius: 50%;
+}
+.img_box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 10px #dbd3c3;
+}
+.img_profile {
+  margin-left: 10px;
+}

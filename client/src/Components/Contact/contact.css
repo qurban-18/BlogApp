@@ -1,0 +1,31 @@
+.Contact {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+}
+
+.contact_avatar {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.contact_avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact_social_handles p {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.ContactCard {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 40px 40px;
+  backdrop-filter: blur(12px);
+}
